@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="#E0E0E0"
         android:id="@+id/imageView" />
 
 
@@ -33,4 +34,12 @@
         android:layout_height="wrap_content"
         android:text="Download"
         android:id="@+id/buttonDownload" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:id="@+id/textView" />
 </LinearLayout>

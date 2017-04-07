@@ -269,7 +269,7 @@ public class DescribeActivity extends AppCompatActivity {
                     mEditText.append("\n--- Raw Data ---\n\n");
                     mEditText.append(data);
                     mEditText.setSelection(0);*/
-                    label=mEditText.getText().toString();
+
                 }
 
                 mButtonSelectImage.setEnabled(true);
@@ -285,7 +285,7 @@ public class DescribeActivity extends AppCompatActivity {
             final ProgressDialog progressDialog = new ProgressDialog(this);
             progressDialog.setTitle("Uploading");
             progressDialog.show();
-
+            label=mEditText.getText().toString();
 String timestamp=Imagename.getText().toString().trim();
             StorageReference riversRef = mStorageRef.child("images/"+timestamp+".jpg");
             // Create file metadata including the content type

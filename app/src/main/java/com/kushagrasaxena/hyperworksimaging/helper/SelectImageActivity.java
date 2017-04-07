@@ -80,12 +80,17 @@ public class SelectImageActivity extends ActionBarActivity {
                       //  Toast.makeText(getApplicationContext(), "Your Location is - \nLat: "
                           //      + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
                     }
+                    if(mFilePhotoTaken!=null) {
+                        Intent intent = new Intent();
 
-                    Intent intent = new Intent();
-                    intent.setData(Uri.fromFile(mFilePhotoTaken));
-                    intent.putExtra("latitude",latitude);
-                    intent.putExtra("longitude",longitude);
-                    setResult(RESULT_OK, intent);
+                        intent.setData(Uri.fromFile(mFilePhotoTaken));
+                        intent.putExtra("latitude", latitude);
+                        intent.putExtra("longitude", longitude);
+                        setResult(RESULT_OK, intent);
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "Retake Picture", Toast.LENGTH_LONG).show();
+                    }
                     finish();
                 }
                 break;
